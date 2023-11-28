@@ -33,6 +33,8 @@ async function getdetails(){
         element.innerHTML+=1/converted.data.CAD.value;
         else if(element.classList[0]=='jpy')
         element.innerHTML+=1/converted.data.JPY.value;
+
+        element.innerHTML+=' Rs.';
     })
     console.log(converted.data.USD.value);
 }
