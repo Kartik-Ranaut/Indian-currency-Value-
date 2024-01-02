@@ -39,4 +39,32 @@ async function getdetails(){
     console.log(converted.data.USD.value);
 }
 
+let convertbutton=document.getElementById("outputClick");
+let outputconvert=document.getElementById("outputConvert");
+let selection=document.getElementById("selection");
+async function details(){
+    data= await fetch(`https://api.currencyapi.com/v3/latest?apikey=cur_live_wxBYZ2gFBnmMrOVj3UbM866J1P3tJyGApjdQfC8u&currencies=EUR%2CUSD%2CCAD%2CCNY%2CGBP%2CJPY&base_currency=INR`);
+    converted= await data.json();
+    return converted;
+    
+}
+convertbutton.addEventListener('click',async function datafun(){
 
+    let optionvalue=selection.value;
+    outputconvert.value=`${optionvalue}`;
+    data =await details();
+    console.log(data.data.USD);
+
+    if(optionvalue=='usd')
+            outputconvert.value=data.data.USD.value;
+        else if(optionvalue=='eur')
+        outputconvert.value=data.data.EUR.value;
+        else if(optionvalue=='gbp')
+        outputconvert.value=data.data.GBP.value;
+        else if(optionvalue=='cny')
+        outputconvert.value=data.data.CNY.value;
+        else if(optionvalue=='cad')
+        outputconvert.value=data.data.CAD.value;
+        else if(optionvalue=='jpy')
+        outputconvert.value=data.data.JPY.value;
+})
