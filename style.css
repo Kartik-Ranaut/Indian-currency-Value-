@@ -75,7 +75,6 @@
     display: flex;
     width: 912px;
     height: 520px;
-    
     justify-content: center;
     align-items: center;
     gap: 12px;
@@ -119,6 +118,9 @@ select{
     border-radius:10px ;
     background-color: #38938A;
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 button{
     cursor: pointer;
