@@ -63,13 +63,16 @@
     height: 80px;
     border-radius: 10px;
     background-color: #54BAB9;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
 }
 
 .container{
     display: flex;
     width: 912px;
     height: 520px;
-    background-color: rgb(238, 173, 173);
+    
     justify-content: center;
     align-items: center;
     gap: 12px;
@@ -85,15 +88,41 @@
 .usd{
     background-color: #4CAF50;
 }
-.usd{
+.eur{
     background-color: #FF5252;
 }
-.usd{
+.cny{
     background-color: #FFC107;
 }
-.usd{
+.gbp{
     background-color: #9C27B0;
 }
-.usd{
-    background-color: #25A7B8;
+.jpy{
+    background-color: #6f6f1b;
+}
+
+input{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0px;
+}
+select{
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    border-radius:10px ;
+    background-color: #38938A;
+    color: white;
+}
+button{
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border-radius:5px ;
+    border: 0px;
+    background-color: #38938A;
+    color: white;
 }
