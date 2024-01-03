@@ -1,10 +1,10 @@
-let apikey = "7c551e4790a53da3c86ccafbd76fa0e4";
+let apikey = "cur_live_W25fZ2Tdsob6PsBLb6PCRErsPs2JRmdrnjZijrQu";
 
 getdetails();
 let convertbox = document.querySelectorAll(".cur");
 let revconvertbox =document.querySelectorAll(".revcur");
 async function getdetails(){
-    data= await fetch(`https://api.currencyapi.com/v3/latest?apikey=cur_live_wxBYZ2gFBnmMrOVj3UbM866J1P3tJyGApjdQfC8u&currencies=EUR%2CUSD%2CCAD%2CCNY%2CGBP%2CJPY&base_currency=INR`);
+    data= await fetch(`https://api.currencyapi.com/v3/latest?apikey=cur_live_W25fZ2Tdsob6PsBLb6PCRErsPs2JRmdrnjZijrQu&currencies=EUR%2CUSD%2CCAD%2CCNY%2CGBP%2CJPY&base_currency=INR`);
     converted= await data.json();
     convertbox.forEach((element)=>{
         if(element.classList[0]=='usd')
